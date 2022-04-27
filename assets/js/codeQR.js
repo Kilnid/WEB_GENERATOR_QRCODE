@@ -1,6 +1,7 @@
 //URL
 
 //Valeur de l'URL a mettre en QRCODE
+var urltitle = document.getElementById("urltitle");
 
 var displayqrcode = document.getElementById("displayqrcode");
 var url = document.getElementById("url");
@@ -11,24 +12,21 @@ function urlQrCodeGenerator() {
     console.log(url);
 }
 
-
-
-
 //WIFI
+function updateQRCode() {
+    var ssid = document.getElementById("ssid").value;
+    var pw = document.getElementById("password").value;
+    var enc = document.getElementById("enc").value;
+    var hidden = document.getElementById("hidden").checked;
+    var qrcode = document.getElementById("qrcode");
 
-function wifiQrCodeGenerator() {
-    function updateQRCode() {
-        var ssid = document.getElementById("ssid").value;
-        var pw = document.getElementById("password").value;
-        var enc = document.getElementById("enc").value;
-        var hidden = document.getElementById("hidden").checked;
-        var qrcode = document.getElementById("qrcode");
+    var text =
+        "WIFI:S:" + ssid + ";T:" + enc + ";P:" + pw + ";H:" + hidden + ";;";
 
-        var text =
-            "WIFI:S:" + ssid + ";T:" + enc + ";P:" + pw + ";H:" + hidden + ";;";
+    qrcode.replaceChild(showQRCode(text), qrcode.lastChild);
 
-        qrcode.replaceChild(showQRCode(text), qrcode.lastChild);
-    }
-
-    document.getElementById("form").onchange = updateQRCode;
 }
+
+
+
+// document.getElementById("form").onclick = updateQRCode;

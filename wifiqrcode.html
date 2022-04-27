@@ -5,50 +5,59 @@
     <meta charset="utf-8" />
     <title>QR_CODE_GENERATEUR</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/img/Spie_Batignolles_Logo.png">
 </head>
 
 <body>
-    <div id="header" onclick="location.href='/wifiqrcode';" style="cursor:pointer;">
-        ccccccccccccccccccccccccccc</div>
-    <div>
-        <div>
-            <h1>QR_CODE URL</h1>
-        </div>
-        <div>
-            <h1>QR_CODE WIFI</h1>
+    <div id="navbar">
+        <div id="parallelogramme2"></div>
+        <div id="parallelogramme1">
+            <a href="https://www.spiebatignolles.fr">
+                <img id="imglogo" src="assets/img/Spie_Batignolles_Logo.png">
+            </a>
         </div>
     </div>
-
-
-
-
-
-
-
-
-    <h1>WiFi</h1>
-    <form id="form">
-        <label><span>SSID:</span><input id="ssid" placeholder="SSID"></label>
-        <label><span>Password:</span><input id="password" placeholder="Password"></label>
-        <label>
-            <span>Encryption:</span>
-            <select id="enc">
-                <option>WPA</option>
-                <option>WEP</option>
-            </select>
-        </label>
-        <label><span>Is Hidden?</span><input type="checkbox" id="hidden"></label>
-        <button id="print" onclick="window.print()">Print</button>
-    </form>
-    <div id="qrcode">
-        <img>
+    <div id="bodyelement">
+        <div></div>
+        <div>
+            <div id="qrselector">
+                <div onclick="location.href='index.html';" style="cursor:pointer;">
+                    <h2>QR_CODE URL</h2>
+                </div>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                <div onclick="location.href='wifiqrcode.html';" style="cursor:pointer;">
+                    <h2>QR_CODE WIFI</h2>
+                </div>
+            </div>
+            <HR id="barrenav">
+            <form id="wifiqrcodeform">
+                <div id="wifiqrcode">
+                    <br>
+                    <label><span>SSID:</span></label><input id="ssid" placeholder="SSID">
+                    <label><span>Mot de passe:</span></label><input id="password" placeholder="Mot de passe">
+                    <label>
+                        <span>Encryptage:</span>
+                    </label>
+                    <select id="enc">
+                        <option>WPA</option>
+                        <option>WEP</option>
+                    </select>
+                    <label>Caché ?</label>
+                    <input type="checkbox" id="hidden">
+                    <button type="button" onclick="updateQRCode()">Generate</button>
+                    <br>
+                    <button id="print" onclick="window.print()">PDF/imprimer</button>
+                    <br>
+                    <div id="qrcode">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div></div>
     </div>
-
     <script src="assets/js/wifiqrcode.js"></script>
     <script src="assets/js/html5-wifiqrcode.js"></script>
     <script src="assets/js/codeQR.js"></script>
-
-
 </body>
 
 </html>

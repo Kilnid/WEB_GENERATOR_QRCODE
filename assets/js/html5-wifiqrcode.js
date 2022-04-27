@@ -15,8 +15,8 @@
 function showQRCode(text) {
 
 
-    var dotsize = 5;  // size of box drawn on canvas
-    var padding = 10; // (white area around your QRCode)
+    var dotsize = 2;  // size of box drawn on canvas
+    var padding = 0; // (white area around your QRCode)
     var black = "rgb(0,0,0)";
     var white = "rgb(255,255,255)";
     var QRCodeVersion = 15; // 1-40 see http://www.denso-wave.com/qrcode/qrgene2-e.html
@@ -27,7 +27,7 @@ function showQRCode(text) {
         // QR Code Error Correction Capability 
         // Higher levels improves error correction capability while decreasing the amount of data QR Code size.
         // QRErrorCorrectLevel.L (5%) QRErrorCorrectLevel.M (15%) QRErrorCorrectLevel.Q (25%) QRErrorCorrectLevel.H (30%)
-        // eg. L can survive approx 5% damage...etc.
+        // eg. L scan survive approx 5% damage...etc.
         var qr = new QRCode(QRCodeVersion, QRErrorCorrectLevel.L);
         qr.addData(text);
         qr.make();
