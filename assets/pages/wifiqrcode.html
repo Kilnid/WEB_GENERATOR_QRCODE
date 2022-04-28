@@ -13,7 +13,7 @@
         <div id="parallelogramme2"></div>
         <div id="parallelogramme1">
             <a href="https://www.spiebatignolles.fr">
-                <img id="imglogo" src="assets/img/Spie_Batignolles_Logo.png">
+                <img id="imglogo" src="../img/Spie_Batignolles_Logo.png" width="100px">
             </a>
         </div>
     </div>
@@ -21,7 +21,7 @@
         <div></div>
         <div>
             <div id="qrselector">
-                <div onclick="location.href='index.html';" style="cursor:pointer;">
+                <div onclick="location.href='../../index.html';" style="cursor:pointer;">
                     <h2>QR_CODE URL</h2>
                 </div>
                 <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
@@ -44,20 +44,20 @@
                     </select>
                     <label>Caché ?</label>
                     <input type="checkbox" id="hidden">
+                    <div id="qrcode">
+                    </div>
                     <button type="button" onclick="updateQRCode()">Generate</button>
                     <br>
                     <button id="print" onclick="window.print()">PDF/imprimer</button>
                     <br>
-                    <div id="qrcode">
-                    </div>
+
                 </div>
             </form>
         </div>
         <div></div>
     </div>
-    <script src="assets/js/wifiqrcode.js"></script>
-    <script src="assets/js/html5-wifiqrcode.js"></script>
-    <script src="assets/js/codeQR.js"></script>
+    <script src="../js/wifiqrcode.js"></script>
+    <script src="../js/codeQR.js"></script>
 </body>
 
 </html>
