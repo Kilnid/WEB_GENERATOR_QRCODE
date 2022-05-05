@@ -2,15 +2,18 @@
 <html>
 
 <head>
+    <!-- meta -->
     <meta charset="utf-8" />
+    <!-- title -->
     <title>QR_CODE_GENERATEUR</title>
+    <!-- stylesheet  -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="icon" href="/favicon-48x48.cbbd161b.png">
+    <!-- icon  -->
     <link rel="icon" href="assets/img/Spie_Batignolles_Logo.png">
 </head>
 
 <body>
-
+    <!-- barre de navigation -->
     <div id="navbar">
         <div id="parallelogramme2"></div>
         <div id="parallelogramme1">
@@ -19,35 +22,86 @@
             </a>
         </div>
     </div>
+    <!-- éléments du body -->
     <div id="bodyelement">
-        <div></div>
         <div>
-            <div id="qrselector">
-                <div onclick="location.href='index.html';" style="cursor:pointer;">
-                    <h2>QR_CODE URL</h2>
+            <button id="print" onclick="window.print()">PDF/imprimer</button>
+            <div id="toprint">
+                <div id="blockname">
+                    <h3 id="titretext">PTU</h3>
+                    <img id="imglogo2" src="assets/img/Spie_Batignolles_Logo.png" width="100px">
                 </div>
-                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
-                <div onclick="location.href='assets/pages/wifiqrcode.html';" style="cursor:pointer;">
-                    <h2>QR_CODE WIFI</h2>
+                <div id="blockqr">
+                    <div class="qrdisplay" id="qrdisplaywifi">
+                        <div id="qrcode1">
+                        </div>
+                        <h4 style="visibility: hidden;">WIFI</h3>
+                    </div>
+                    <div class="qrdisplay" id="qrdisplayurl">
+                        <div id="qrcode2">
+                        </div>
+                        <h4 style="visibility: hidden;">URL</h3>
+                    </div>
                 </div>
             </div>
+            <!-- liens de redirection entre les deux pages -->
             <HR id="barrenav">
-            <form id="urlqrcodeform">
-                <div id="urlqrcode">
-                    <br>
-                    <input id="url" placeholder="URL">
-                    <br>
-                    <div id="displayqrcode"></div>
-                    <br>
-                    <button type="button" onclick="urlQrCodeGenerator()">Generate</button>
-                    <br>
-                    <button id="print" onclick="window.print()">PDF/imprimer</button>
-                </div>
+            <form id="textfrom">
+                <label><span>TEXTE : </span></label><input id="textname" placeholder="exemple : PTU01">
+                <button type="button" onclick="updateTextTitre()">Ajouter</button>
             </form>
+            <HR id="barrenav">
+            <!-- QRCODE formulaire -->
+
+            <div id="formdiv">
+                <!--formulaire WIFI QRCODE -->
+                <form id="wifiqrcodeform">
+                    <div id="wifiqrcode">
+                        <br>
+                        <label><span>SSID:</span></label><input id="ssid" placeholder="SSID">
+                        <label><span>Mot de passe:</span></label><input id="password" placeholder="Mot de passe">
+                        <label>
+                            <span>Encryptage:</span>
+                        </label>
+                        <select id="enc">
+                            <option>WPA</option>
+                            <option>WEP</option>
+                        </select>
+                        <label>Caché ?</label>
+                        <input type="checkbox" id="hidden">
+
+                        <button type="button" onclick="updateQRCode()">Generate</button>
+                        <br>
+                    </div>
+                </form>
+                <!--formulaire URL QRCODE -->
+
+                <form id="urlqrcodeform">
+
+                    <div id="urlqrcode">
+                        <br>
+                        <input id="url" placeholder="URL">
+                        <br>
+                        <a
+                            href="https://demo.distech-controls.com/eclypse/envysion/viewer.html?proj=DEmo_Envysion_20_FFFF&lan=fr">demo.distech-controls.com
+                        </a>
+                        <br>
+                        <button type="button" onclick="urlQrCodeGenerator()">Generate</button>
+                        <br>
+                    </div>
+                </form>
+
+            </div>
+            <!-- btn impression/pdf -->
+            <!-- btn impression/pdf -->
+
+
         </div>
-        <div></div>
+
     </div>
-    <script src="assets/js/qrcode.min.js"></script>
+    <!-- scripts -->
+    <script src="assets/js/wifiqrcode.js"></script>
+
     <script src="assets/js/codeQR.js"></script>
 </body>
 

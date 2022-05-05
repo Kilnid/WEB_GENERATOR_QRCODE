@@ -1,5 +1,21 @@
-/* body {
+body {
     background-color: whitesmoke;
+}
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    margin-top: -20px;
+    padding-bottom: -10px
+}
+
+button {
+    background-color: black;
+    color: #ffffff;
+    border-radius: 5px;
+    height: 30px;
 }
 
 #navbar {
@@ -7,14 +23,12 @@
 }
 
 #parallelogramme1 {
-
     margin-top: -8px;
     margin-left: -50px;
     width: 52%;
     height: 50px;
     background: #4C4B63;
     -webkit-transform: skew(45deg);
-
 }
 
 #parallelogramme2 {
@@ -24,7 +38,6 @@
     width: 100%;
     height: 50px;
     background: #2D898B;
-
 }
 
 #imglogo {
@@ -35,28 +48,33 @@
     -webkit-transform: skew(-45deg);
 }
 
-#bodyelement {
-    display: flex;
 
-    justify-content: center;
-}
 
-#qrselector {
-    display: flex;
-    justify-content: space-around;
-}
-
-h2 {
+#textfrom {
     text-align: center;
 }
 
+
+
 #barrenav {
-    width: 100%;
+    width: 90%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#formdiv {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #urlqrcodeform {
     display: flex;
     justify-content: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    margin: 15px;
+    padding: 15px;
 }
 
 #urlqrcode {
@@ -67,6 +85,11 @@ h2 {
 #wifiqrcodeform {
     display: flex;
     justify-content: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    margin: 15px;
+    padding: 15px;
 }
 
 #wifiqrcode {
@@ -79,9 +102,48 @@ h2 {
     justify-content: center;
 }
 
-button {
-    background-color: black;
-    color: #ffffff;
-    border-radius: 5px;
 
-} */
+
+#toprint {
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    padding: 15px;
+}
+
+#blockname {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#blockqr {
+    display: flex;
+    justify-content: center;
+
+}
+
+.qrdisplay {
+    text-align: center;
+}
+
+@media print {
+    body * {
+
+        visibility: hidden;
+
+    }
+
+    body {
+        background-color: #ffffff;
+    }
+
+
+
+    #toprint * {
+
+        visibility: visible;
+
+    }
+
+}

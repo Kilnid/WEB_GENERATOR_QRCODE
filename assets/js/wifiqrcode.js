@@ -3,7 +3,7 @@
 //
 // Copyright (c) 2009 Kazuhiko Arase
 //
-// URL: http://www.d-project.com/
+// URL: http://www.d-project.com/ // https://kazuhikoarase.github.io/
 //
 // Licensed under the MIT license:
 //   http://www.opensource.org/licenses/mit-license.php
@@ -1231,11 +1231,11 @@ QRBitBuffer.prototype = {
 function showQRCode(text) {
 
 
-    var dotsize = 3;  // size of box drawn on canvas
-    var padding = 50; // (white area around your QRCode)
-    var black = "rgb(0,150,150)";
-    var white = "rgb(255,255,255)";
-    var QRCodeVersion = 15; // 1-40 see http://www.denso-wave.com/qrcode/qrgene2-e.html
+    var dotsize = 4;  // size of box drawn on canvas //5->5lv ou 4->9
+    var padding = 50; // (white area around your QRCode) //50
+    var black = "#000000"; //#0B4F6C
+    var white = "#FFFFFF";
+    var QRCodeVersion = 10; // 1-40 see http://www.denso-wave.com/qrcode/qrgene2-e.html
 
     var canvas = document.createElement('canvas');
     var qrCanvasContext = canvas.getContext('2d');
