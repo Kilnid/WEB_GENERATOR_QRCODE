@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<!-- meta -->
+	<meta charset="utf-8" />
+	<!-- title -->
+	<title>Extraction_Excel_QRCODE</title>
+	<!-- stylesheet  -->
+	<link href="../css/styleQRXL.css" rel="stylesheet">
+	<!-- icon  -->
+	<link rel="icon" href="../img/Spie_Batignolles_Logo.png">
+</head>
+
+<body>
+	<!-- barre de navigation -->
+	<div width="50%" id="navbar">
+		<div id="parallelogramme2"></div>
+		<div id="parallelogramme1">
+			<a href="https://www.spiebatignolles.fr">
+				<img id="imglogo" src="../img/Spie_Batignolles_Logo.png" width="100px">
+			</a>
+		</div>
+	</div>
+	<div id="navbar2">
+
+		<div class="box" onclick="location.href='../../index.html'"><a href="../../index.html">index</a> </div>
+	</div>
+
+	<div id="bodyelement">
+		<div></div>
+		<div id="qrcenter">
+			<label for="input" class="file-upload">
+				Le fichier à convertir <code>*.xlsx</code>
+			</label>
+			<input type="file" id="input" />
+
+
+			<div id="error"></div>
+			<button style="margin-bottom: 15px ;" onclick="imprimertout()" id="btnpdf">PDF/Imprimer tout</button>
+		</div>
+
+		<div></div>
+	</div>
+
+	<script src="./../js/wifiqrcode.js"></script>
+	<script src="./../read-excel-file.min.js"></script>
+	<script src="./../lib/promise-polyfill.min.js"></script>
+	<script src="./../lib/prism.js"></script>
+	<script src="./../js/readxl.js"></script>
+
+</body>
+
+</html>

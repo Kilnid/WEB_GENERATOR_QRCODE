@@ -1,21 +1,25 @@
 body {
     background-color: whitesmoke;
+    overflow-x: hidden;
 }
 
-h2 {
-    text-align: center;
-}
 
-h4 {
-    margin-top: -20px;
-    padding-bottom: -10px
-}
 
 button {
     background-color: black;
     color: #ffffff;
     border-radius: 5px;
     height: 30px;
+}
+
+.box {
+    font-family: cursive;
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 #navbar {
@@ -25,7 +29,7 @@ button {
 #parallelogramme1 {
     margin-top: -8px;
     margin-left: -50px;
-    width: 52%;
+    width: 55%;
     height: 50px;
     background: #4C4B63;
     -webkit-transform: skew(45deg);
@@ -48,23 +52,24 @@ button {
     -webkit-transform: skew(-45deg);
 }
 
+#navbar2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+}
 
+#bodyelement {
+    display: flex;
+    justify-content: center;
+}
+
+#bodyelement {
+    display: flex;
+    justify-content: center;
+}
 
 #textfrom {
     text-align: center;
-}
-
-
-
-#barrenav {
-    width: 90%;
-    margin-bottom: 25px;
-    margin-top: 25px;
-}
-
-#formdiv {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 #urlqrcodeform {
@@ -102,8 +107,6 @@ button {
     justify-content: center;
 }
 
-
-
 #toprint {
     border-radius: 10px;
     background-color: #ffffff;
@@ -125,25 +128,4 @@ button {
 
 .qrdisplay {
     text-align: center;
-}
-
-@media print {
-    body * {
-
-        visibility: hidden;
-
-    }
-
-    body {
-        background-color: #ffffff;
-    }
-
-
-
-    #toprint * {
-
-        visibility: visible;
-
-    }
-
 }
